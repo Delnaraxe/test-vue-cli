@@ -5,11 +5,14 @@
       color="primary"
       dark
     >
+      <v-btn @click="loadRouter()">
+        load router
+      </v-btn>
 
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
+      <router-view />
     </v-main>
 
     <v-footer>
@@ -20,17 +23,23 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    //
   },
 
   data: () => ({
     //
   }),
+
+  methods: {
+    loadRouter() { // permet de modifier l'adresse avec un 'nom' equivalent dans le router.js
+      this.$router.push({ name: 'hello' });
+    },
+  },
 };
 </script>
