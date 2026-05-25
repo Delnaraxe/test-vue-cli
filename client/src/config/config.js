@@ -1,1 +1,1 @@
-export const TEST_CONFIG = "this is a variable stored in @../config/config.js"
+export const TEST_CONFIG = ">>this<< is a variable stored in @../config/config.js"
